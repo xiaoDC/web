@@ -6,7 +6,13 @@ app = Flask(__name__)
 app.config["DEBUG"] = True  # Only include this while you are testing your app
 
 @app.route("/")
+@app.route("/index.html")
 def hello():
+    return render_template("page.html")
+
+
+@app.route("/about.html")
+def about():
     return render_template("index.html")
 
 @app.route('/signin', methods=['GET'])

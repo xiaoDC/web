@@ -23,18 +23,18 @@ var DEV = 'dev';
 
 var env = process.argv[2] || DEV;
 var path = {
-    sass: './styles/sass/*.scss',
-    mainsass:'./styles/sass/main.scss',
-    css: './styles/css',
-    coffeeLint:'.scripts/**/*.coffee',
-    // coffeeFrom: ['../../src/components/fall/*.coffee','../../src/components/common/*.coffee'],
+    sass: './static/styles/sass/*.scss',
+    mainsass:'./static/styles/sass/index.scss',
+    css: './static/styles/css',
+    coffeeLint:'./static/scripts/**/*.coffee',
+    coffeeFrom: ['./static/scripts/**/*.coffee'],
     // coffeeTo: ['./scripts/coffee/fall/*','./scripts/coffee/common/*'],
-    coffee: './scripts/coffee/**/*.coffee',
-    js: 'scripts/',
-    jsbuild: './build/js/',
-    cssbuild: './build/css/',
-    images: './images/*',
-    imagesbuild: './build/images/'
+    coffee: './static/scripts/coffee/**/*.coffee',
+    js: './static/scripts/js/',
+    jsbuild: './static/build/js/',
+    cssbuild: './static/build/css/',
+    images: './static/images/*',
+    imagesbuild: './static/build/images/'
 }
 
 
@@ -68,7 +68,7 @@ gulp.task('lint', function () {
 });
 
 gulp.task('coffee', ['lint'],function () {
-  return gulp.src('./scripts/coffee/main.coffee', { read: false })
+  return gulp.src('./static/scripts/coffee/main.coffee', { read: false })
 
         // .pipe(sourcemaps.init())
         .pipe(browserify({
@@ -96,7 +96,7 @@ var watcher = function() {
     watcher2.on('change', function(event) {
         console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     });
-    var watcher3 = gulp.watch('./scripts/js/', ['build']);
+    var watcher3 = gulp.watch('./static/scripts/js/', ['build']);
     watcher2.on('change', function(event) {
         console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     });

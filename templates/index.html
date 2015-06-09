@@ -1,55 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>My Website</title>
-        <link href="static/css/index.css" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        <div class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
-                        <span class="icon-bar"></span> 
-                        <span class="icon-bar"></span> 
-                        <span class="icon-bar"></span>              
-                    </a>
-                    <a class="brand" href="./"></a>
-                    <div class="nav-collapse">
-                        <ul class="nav pull-right">
-                            <li class="menu-item-home current-menu-item">
-                                <a href="index.html"><span class="badge badge-warning">Home</span></a>
-                            </li>
-                            <li class="divider-vertical"></li>
-                            <li class="dropdown">
-                                <a data-toggle="dropdown" class="dropdown-toggle " href="signIn.html">Log In</a>
-                            </li>
-                            <li class="divider-vertical"></li>
-                            <li>
-                                <a data-toggle="dropdown" class="dropdown-toggle " href="register.html">Sign Up</a>
-                            </li>
-                        </ul>    
-                    </div> <!-- /nav-collapse -->
-                </div> <!-- /container -->
-            </div> <!-- /navbar-inner -->
-        </div> <!-- /navbar -->
 
-        <form action="/search" method ="POST" class="form-search">
-            <table>
-                <tr>
-                    <div class="header">
-                        <div>Bidding<span>Seller</span></div>
-                    </div>
-                </tr>
-                <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-                <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-                <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-                <tr>
-                    <td><input type="text" class="search" placeholder="Search for an amazing price?" name="user_search" required></td>
-                    <td></td>
-                    <td><a href = "searchitem.html"><input type="button" value="search" class="submit"></a></td>
-                </tr>
-        </form>
-    </body>
+<head>
+    <meta charset="utf-8">
+    <title>My Website</title>
+    <link href="./static/styles/css/index.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <main>
+        <div class="cd-index cd-main-content">
+            <div>
+                <h1>Animated Page Transition</h1>
+                <a class="cd-btn" href="about.html" data-type="page-transition">Start animation</a>
+            </div>
+        </div>
+    </main>
+    <div class="cd-cover-layer"></div>
+    <div class="cd-loading-bar"></div>
+    <!-- <script src="js/jquery-2.1.1.js"></script> -->
+    <script src="./static/scripts/js/app.js"></script>
+    <!-- Resource jQuery -->
+</body>
+
 </html>
-

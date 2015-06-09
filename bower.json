@@ -1,0 +1,16 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "homepage": "https://github.com/KayShen/web",
+  "authors": [
+    "ltchronus <ltchronus@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
