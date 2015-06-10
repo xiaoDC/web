@@ -1,40 +1,13 @@
 @import "compass/reset";
 @import "compass/css3/transform";
-html {
-  font-size: 10px;
-  height: 100%;
-}
-body {
-  height: 100%;
-  font-size: 1.2em;
-  font-family: "Georgia", "Songti SC Regular";
-  background: $bodyBackground;
-}
+// html {
+//   font-size: 10px;
+//   height: 100%;
+// }
+// body {
+//   height: 100%;
+//   font-size: 1.2em;
+//   font-family: "Georgia", "Songti SC Regular";
+//   background: $bodyBackground;
+// }
 
-.container{
-  position: relative;
-  height: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-}
-.content-container{
-  height: 100%;
-}
-.content {
-  height: auto;
-  min-height: 100%;
-  padding-bottom: 50px;
-}
-* {
-   // backface-visibility: hidden;
-   // -webkit-backface-visibility: hidden;
-   -moz-user-select: none;
-   -webkit-user-select: none;
-   -ms-user-select: none;
-   /*tap backgroud*/
-   -webkit-tap-highlight-color:transparent;
-}
-
-a, img {
-    -webkit-touch-callout: none;
-}

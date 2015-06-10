@@ -8,12 +8,16 @@ app.config["DEBUG"] = True  # Only include this while you are testing your app
 @app.route("/")
 @app.route("/index.html")
 def hello():
-    return render_template("page.html")
+    return render_template("index.html")
 
 
 @app.route("/about.html")
 def about():
-    return render_template("index.html")
+    return render_template("about.html")
+
+@app.route("/survey.html")
+def survey():
+    return render_template("survey.html")
 
 @app.route('/signin', methods=['GET'])
 def signin_form():

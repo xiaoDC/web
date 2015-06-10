@@ -9211,6 +9211,11 @@ return jQuery;
 }));
 
 },{}],2:[function(require,module,exports){
+
+
+
+
+},{}],3:[function(require,module,exports){
 var $;
 
 $ = require('jQuery');
@@ -9271,8 +9276,12 @@ $(document).ready(function(event) {
           return $('.cd-loading-bar').off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
         });
         if (!transitionsSupported()) {
-          return isAnimating = false;
+          isAnimating = false;
         }
+        return setTimeout(function() {
+          $('.male').addClass('slideUp');
+          return $('.female').addClass('slideDown');
+        }, 1200);
       }, delay);
       if (url !== window.location && bool) {
         return window.history.pushState({
@@ -9281,19 +9290,24 @@ $(document).ready(function(event) {
       }
     });
   };
-  return transitionsSupported = function() {
+  transitionsSupported = function() {
     return $('html').hasClass('csstransitions');
   };
+  return $('main').on('click', '.male, .female', function(e) {
+    return window.location = '/survey.html';
+  });
 });
 
 
 
-},{"jQuery":1}],3:[function(require,module,exports){
+},{"jQuery":1}],4:[function(require,module,exports){
 require('./index');
 
+require('./form');
 
 
-},{"./index":2}]},{},[3])
+
+},{"./form":2,"./index":3}]},{},[4])
 
 
 //# sourceMappingURL=app.map.js

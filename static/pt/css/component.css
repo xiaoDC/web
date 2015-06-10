@@ -43,9 +43,49 @@ html, body { height: 100%; }
 }
 
 /* Text Styles, Colors, Backgrounds */
-
-.pt-page h1 {
+.pt-form{
+	position: relative;
+	display: inline-block;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+	margin: 50px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 5px;
+  padding: 20px;
+}
+.pt-form .answer{
+	position: relative;
+	width: 600px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  text-align: center;
+ }
+.icon-tick{
 	position: absolute;
+  left: 0;
+  top: 13px;
+ 	width: 30px;
+  height: 30px;
+  display: inline-block;
+  border: 4px solid #cccccc;
+  vertical-align: middle;
+  background-color: rgba(0,0,0,0.3);
+  background-size: 20px 14px;
+  border-radius: 50%;
+}
+.answer-text{
+	display: inline-block;
+}
+.pt-page h1 {
+	position: relative;
 	font-weight: 300;
 	font-size: 4.4em;
 	line-height: 1;
@@ -58,15 +98,24 @@ html, body { height: 100%; }
 	word-spacing: -0.3em;
 }
 
-.pt-page h1 span {
+.pt-page  .title {
 	font-family: 'Satisfy', serif;
 	font-weight: 400;
-	font-size: 40%;
+	font-size: 2em;
+	/*font-size: 40%;*/
 	text-transform: none;
 	word-spacing: 0;
 	letter-spacing: 0;
-	display: block;
-	opacity: 0.4;
+	position: relative;
+	display: inline-block;
+	opacity: 0.8;
+	width: 600px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .pt-page h1 strong {
@@ -101,15 +150,15 @@ html, body { height: 100%; }
 
 .pt-triggers {
 	position: absolute;
-	width: 300px;
+	/*width: 300px;*/
 	z-index: 999999;
-	top: 12%;
-	left: 50%;
+	bottom: 5%;
+	right: 5%;
 	margin-top: 130px;
-	-webkit-transform: translateX(-50%);
+	/*-webkit-transform: translateX(-50%);
 	-moz-transform: translateX(-50%);
-	-ms-transform: translateX(-50%); 
-	transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);*/
 }
 
 .no-js .pt-triggers {
@@ -118,6 +167,7 @@ html, body { height: 100%; }
 
 .pt-triggers .dl-menuwrapper button,
 .pt-touch-button {
+	border-radius: 5px;
 	border: none;
 	font-size: 13px;
 	font-weight: 700;
@@ -199,7 +249,7 @@ html, body { height: 100%; }
 	}
 }
 
-@media screen and (max-height: 38em) { 
+@media screen and (max-height: 38em) {
 	.pt-triggers .dl-menuwrapper {
 		display: none;
 	}

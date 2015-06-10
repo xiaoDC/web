@@ -1,16 +1,33 @@
-<html>
+<!doctype html>
+<html lang="en" class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
 <head>
-  <title>Please Sign In</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="./static/styles/css/index.css"> <!-- CSS reset -->
+  <!-- <link rel="stylesheet" href="css/style.css"> Resource style -->
+  <!-- <script src="js/modernizr.js"></script>  Modernizr -->
+
+  <title>About | CodyHouse</title>
 </head>
-<body>
-  {% if message %}
-  <p style="color:red">{{ message }}</p>
-  {% endif %}
-  <form action="/signin" method="post">
-    <legend>Please sign in:</legend>
-    <p><input name="username" placeholder="Username" value="{{ username }}"></p>
-    <p><input name="password" placeholder="Password" type="password"></p>
-    <p><button type="submit">Sign In</button></p>
-  </form>
+<body class="cd-about">
+  <main>
+    <div class="cd-about cd-main-content">
+      <div>
+        <a class="cd-btn" href="index.html" data-type="page-transition">&#8592; Go back</a>
+
+        <h1>Select Your Gender</h1>
+
+        <i class="male"></i>
+        <i class="female"></i>
+      </div>
+    </div>
+  </main>
+  <div class="cd-cover-layer"></div>
+  <div class="cd-loading-bar"></div>
+<!-- <script src="js/jquery-2.1.1.js"></script> -->
+<script src="./static/scripts/js/app.js"></script> <!-- Resource jQuery -->
 </body>
 </html>

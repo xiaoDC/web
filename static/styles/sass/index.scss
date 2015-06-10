@@ -1,3 +1,6 @@
+@import './reset';
+@import './slide';
+
 /* --------------------------------
 
 Primary style
@@ -12,6 +15,7 @@ html {
 }
 
 body {
+  margin: 0;
   font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
   color: #4089a6;
@@ -117,7 +121,7 @@ body.page-is-changing::after, body.page-is-changing::before {
 
 main {
   height: 100vh;
-  padding: 10px;
+  padding: 0;
   text-align: center;
 }
 main .cd-main-content {
@@ -192,24 +196,24 @@ main p {
   color: #535966;
   text-align: left;
 }
-@media only screen and (min-width: 768px) {
-  main {
-    padding: 20px;
-  }
-  main .cd-main-content {
-    height: calc(100vh - 40px);
-  }
-  main.cd-index > div {
-    padding-top: 200px;
-  }
-  main.cd-index > div {
-    padding-top: 50px;
-  }
-  main p {
-    font-size: 1.8rem;
-    line-height: 2;
-  }
-}
+// @media only screen and (min-width: 768px) {
+//   main {
+//     padding: 20px;
+//   }
+//   main .cd-main-content {
+//     height: calc(100vh - 40px);
+//   }
+//   main.cd-index > div {
+//     padding-top: 200px;
+//   }
+//   main.cd-index > div {
+//     padding-top: 50px;
+//   }
+//   main p {
+//     font-size: 1.8rem;
+//     line-height: 2;
+//   }
+// }
 
 .cd-cover-layer {
   /* layer that covers the content when the animation is triggered */
@@ -335,4 +339,20 @@ main p {
   .cd-loading-bar {
     width: calc(100% - 40px);
   }
+}
+
+
+.male {
+  display: inline-block;
+  width: 128px;
+  height: 128px;
+  background-image: url(../../images/male.png);
+  visibility: hidden;
+}
+.female {
+  display: inline-block;
+  width: 128px;
+  height: 128px;
+  background-image: url(../../images/female.png);
+  visibility: hidden;
 }

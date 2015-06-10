@@ -64,6 +64,10 @@ $(document).ready (event) ->
 
         if( !transitionsSupported() )
           isAnimating = false
+        setTimeout () ->
+          $('.male').addClass 'slideUp'
+          $('.female').addClass 'slideDown'
+        , 1200
       , delay
 
       if url isnt window.location and bool
@@ -73,3 +77,6 @@ $(document).ready (event) ->
 
   transitionsSupported = () ->
     return $('html').hasClass('csstransitions')
+
+  $('main').on 'click', '.male, .female', (e)->
+    window.location = '/survey.html'
