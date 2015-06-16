@@ -167,6 +167,7 @@ html, body { height: 100%; }
 
 .pt-triggers {
 	position: absolute;
+	display: none;
 	/*width: 300px;*/
 	z-index: 999999;
 	bottom: 5%;
@@ -208,7 +209,7 @@ html, body { height: 100%; }
 }
 
 .pt-touch-button {
-	display: none;
+
 	background: #fff;
 	color: #aaa;
 }
