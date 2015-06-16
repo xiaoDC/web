@@ -348,6 +348,7 @@ main p {
   height: 128px;
   background-image: url(../../images/male.png);
   visibility: hidden;
+  cursor: pointer;
 }
 .female {
   display: inline-block;
@@ -355,4 +356,5 @@ main p {
   height: 128px;
   background-image: url(../../images/female.png);
   visibility: hidden;
+  cursor: pointer;
 }

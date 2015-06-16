@@ -426,7 +426,10 @@ var PageTransitions = (function() {
 
 	return {
 		init : init,
-		nextPage : nextPage
+		nextPage : nextPage,
+		current: current,
+		pagesCount: pagesCount,
+		animcursor: animcursor
 	};
 
 })();

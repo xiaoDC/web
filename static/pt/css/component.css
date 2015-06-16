@@ -60,6 +60,8 @@ html, body { height: 100%; }
 .pt-form .answer{
 	position: relative;
 	width: 600px;
+	height: 30px;
+	margin: 0 0 15px 0;
 	left: 50%;
 	-webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -67,11 +69,23 @@ html, body { height: 100%; }
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
   text-align: center;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
  }
+.pt-form .answer:hover{
+	background: rgba(0,0,0,0.3);
+}
+.answer:hover .icon-tick{
+	border-color: #F70E66;
+}
+.answer .checked{
+	border-color: #F70E66;
+	background-color: #F70E66;
+}
 .icon-tick{
 	position: absolute;
   left: 0;
-  top: 13px;
+  /*top: 13px;*/
  	width: 30px;
   height: 30px;
   display: inline-block;
@@ -80,9 +94,12 @@ html, body { height: 100%; }
   background-color: rgba(0,0,0,0.3);
   background-size: 20px 14px;
   border-radius: 50%;
+  background-image: url(data:image/png;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NS4zMTkiIGhlaWdodD0iMzUuODAyIiB2aWV3Qm94PSIwIDAgNDUuMzE5IDM1LjgwMiI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTM3LjM5NCAwYy0yLjIxNiAyLjIyMS0xMi40MTEgMTIuNDUzLTE5LjkwNyAxOS45Ny0zLjc5Ni0zLjgxNi03Ljc3My03LjgyLTkuNTYzLTkuNjEybC03LjkyNCA3LjkxOGMzLjMxNSAzLjI5OSAxNC4xMDEgMTQuMjM4IDE3LjM3NyAxNy41MjZsLjEwMy0uMTAzLjEwMy4xMDNjMy4yNzYtMy4yODcgMjQuNDIxLTI0LjU4NCAyNy43MzUtMjcuODgzLTIuNjM1LTIuNjM1LTUuMjMyLTUuMjI5LTcuOTI0LTcuOTE5eiIvPjwvc3ZnPgo=);
+  background-size: 20px 14px
 }
 .answer-text{
 	display: inline-block;
+	margin: 0;
 }
 .pt-page h1 {
 	position: relative;
@@ -191,6 +208,7 @@ html, body { height: 100%; }
 }
 
 .pt-touch-button {
+	display: none;
 	background: #fff;
 	color: #aaa;
 }

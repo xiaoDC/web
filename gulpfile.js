@@ -68,7 +68,7 @@ gulp.task('lint', function () {
 });
 
 gulp.task('coffee', ['lint'],function () {
-  return gulp.src('./static/scripts/coffee/main.coffee', { read: false })
+    var main =  gulp.src('./static/scripts/coffee/main.coffee', { read: false })
 
         // .pipe(sourcemaps.init())
         .pipe(browserify({
@@ -83,6 +83,20 @@ gulp.task('coffee', ['lint'],function () {
         .pipe(gulp.dest(path.js))
         // .pipe(exorcist(path.js))
         // .pipe(gulp.dest(path.js));
+    var survey =  gulp.src('./static/scripts/coffee/survey.coffee', { read: false })
+
+        // .pipe(sourcemaps.init())
+        .pipe(browserify({
+            debug : true,
+            transform: ['coffeeify'],
+            extensions: ['.coffee']
+        }))
+        .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+        .pipe(transform(function () { return exorcist(path.js + 'survey.map.js'); }))
+        .pipe(rename('survey.js'))
+    // .pipe(sourcemaps.write())
+        .pipe(gulp.dest(path.js))
+    merge(main, survey);
 });
 
 

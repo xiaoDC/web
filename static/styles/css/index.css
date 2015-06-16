@@ -1105,11 +1105,13 @@ main p {
   width: 128px;
   height: 128px;
   background-image: url(../../images/male.png);
-  visibility: hidden; }
+  visibility: hidden;
+  cursor: pointer; }
 
 .female {
   display: inline-block;
   width: 128px;
   height: 128px;
   background-image: url(../../images/female.png);
-  visibility: hidden; }
+  visibility: hidden;
+  cursor: pointer; }
