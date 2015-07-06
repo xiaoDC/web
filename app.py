@@ -39,6 +39,10 @@ def my_name():
 def website():
 	return "adicu.com"
 
+@app.route("/net")
+def net():
+    return render_template("net.html")
+
 @app.route("/search/<search_query>")
 def search(search_query):
 	url = "https://api.github.com/search/repositories?q=" + search_query # add url , get info from github , input http://0.0.0.0:5000/search/Space%20Invaders%20HTML5+language:JavaScript

@@ -96,7 +96,20 @@ gulp.task('coffee', ['lint'],function () {
         .pipe(rename('survey.js'))
     // .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.js))
-    merge(main, survey);
+    var net =  gulp.src('./static/scripts/coffee/net.coffee', { read: false })
+
+        // .pipe(sourcemaps.init())
+        .pipe(browserify({
+            debug : true,
+            transform: ['coffeeify'],
+            extensions: ['.coffee']
+        }))
+        .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+        .pipe(transform(function () { return exorcist(path.js + 'net.map.js'); }))
+        .pipe(rename('net.js'))
+    // .pipe(sourcemaps.write())
+        .pipe(gulp.dest(path.js))
+    merge(main, survey, net);
 });
 
 
